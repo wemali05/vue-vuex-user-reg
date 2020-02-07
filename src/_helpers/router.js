@@ -10,9 +10,21 @@ Vue.use(Router);
 export const router = new Router({
   mode: 'history',
   routes: [
-    { path: '/', component: HomePage },
-    { path: '/login', component: LoginPage },
-    { path: '/register', component: RegisterPage },
+    {
+        path: '/',
+        name: 'home',
+        component: HomePage
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: LoginPage
+    },
+    {
+        path: '/register',
+        name: 'rigister',
+        component: RegisterPage
+    },
 
     // otherwise redirect to home
     { path: '*', redirect: '/' }
